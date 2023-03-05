@@ -60,7 +60,7 @@ function App() {
             <HomeRounded onClick={() => navigate('/')} />
           )
         }
-        <p onClick={() => navigate('/favorites')}>FAVORITES</p>
+        <p onClick={() => window.history.back()}>FAVORITES</p>
       </footer>
     </div>
   );
