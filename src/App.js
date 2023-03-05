@@ -40,7 +40,7 @@ function App() {
 
   const clearLocalStorage = () => {
     localStorage.clear();
-    navigate('/');
+    // navigate('/');
     window.location.reload();
   };
 

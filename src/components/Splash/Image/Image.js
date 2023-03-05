@@ -4,9 +4,7 @@ import './Image.css';
 import {
   motion,
   useScroll,
-  useSpring,
   useTransform,
-  MotionValue
 } from "framer-motion";
 
 import { Spinner } from 'grommet';
