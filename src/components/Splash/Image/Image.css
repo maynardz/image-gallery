@@ -17,11 +17,6 @@ section > div {
   margin: 20px;
 }
 
-.img-container {
-  /* margin-bottom: 2em; */
-  padding-bottom: 2em;
-}
-
 .img-main {
   position: absolute;
   top: 0;
