@@ -54,8 +54,12 @@ function App() {
         <Route path='/favorites' element={<Favorites clearLocalStorage={clearLocalStorage} />} /> 
       </Routes>
       <footer>
-        <p>ZSM.DEV</p>
-        <HomeRounded onClick={() => navigate('/')} />
+        <p><a href='https://github.com/maynardz/image-gallery' target={'_blank'}>ZSM.DEV</a></p>
+        {
+          window.location.pathname === '/' ? <div></div> : (
+            <HomeRounded onClick={() => navigate('/')} />
+          )
+        }
         <p onClick={() => navigate('/favorites')}>FAVORITES</p>
       </footer>
     </div>
