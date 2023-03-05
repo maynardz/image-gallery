@@ -33,7 +33,10 @@ function App() {
         let parsed = imgs.map(img => JSON.parse(img));
         setImages(images => ({ ...images, images: parsed}));
       } else {
-        localStorage.setItem(`image${num}`, JSON.stringify({image_id: num, favorited: false}))
+        localStorage.setItem(`image${num}`, JSON.stringify({image_id: num, favorited: false}));
+        let imgs = Object.keys(localStorage).map(k => localStorage.getItem(k));
+        let parsed = imgs.map(img => JSON.parse(img));
+        setImages(images => ({ ...images, images: parsed}));
       }
     })
   }, []);
