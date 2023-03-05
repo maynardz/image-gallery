@@ -57,10 +57,10 @@ function App() {
         <p><a href='https://github.com/maynardz/image-gallery' target={'_blank'}>ZSM.DEV</a></p>
         {
           window.location.pathname === '/' ? <div></div> : (
-            <HomeRounded onClick={() => navigate('/')} />
+            <HomeRounded onClick={() => window.location.back()} />
           )
         }
-        <p onClick={() => window.history.back()}>FAVORITES</p>
+        <p onClick={() => navigate('/favorites')}>FAVORITES</p>
       </footer>
     </div>
   );
