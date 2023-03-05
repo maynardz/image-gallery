@@ -25,7 +25,7 @@ const Image = (props) => {
 
   return (
     <section>
-      <div ref={ref}>
+      <div class='img_container' ref={ref}>
         {
           loaded ? null : (
             <div style={{ display: 'flex', justifyContent: 'center'}}>

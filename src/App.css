@@ -27,13 +27,19 @@ h1 {
 h2 {
   margin: 0;
   color: whitesmoke;
-  top: calc(65% + 130px);
+  top: calc(60% + 130px);
   font-size: 56px;
   font-weight: 700;
   letter-spacing: -3px;
   line-height: 1.2;
   position: absolute;
   /* margin: 0 auto; */
+}
+
+@media screen and (max-width: 760px) {
+  h2 {
+    top: calc(50% +130px)
+  }
 }
 
 @media screen and (max-width: 576px) {
