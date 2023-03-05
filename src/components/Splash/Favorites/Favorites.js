@@ -21,13 +21,19 @@ const Favorites = props => {
     <div>
       <div className='favorites-container'>
         {
-          favorites.map((image, index) => (
-            image.favorited ? (
-              <div className='img-container' key={index}>
-                <img className='fav' src={`../../${image.image_id}.jpg`} />
-              </div>
-            ) : <div></div>
-          ))
+          favorites.length === 0 ? (
+            <div style={{ height: '75vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+              <p style={{ color: 'whitesmoke' }}>You have not added any favorites yet</p>
+            </div>
+          ) : (
+            favorites.map((image, index) => (
+              image.favorited ? (
+                <div className='img-container' key={index}>
+                  <img className='fav' src={`../../${image.image_id}.jpg`} />
+                </div>
+              ) : <div></div>
+            ))
+          )
         }
       </div>
       <div className='clear-container'>
