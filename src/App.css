@@ -38,7 +38,7 @@ h2 {
 
 @media screen and (max-width: 576px) {
   h2 {
-    top: calc(65% + 130px);
+    top: calc(55% + 130px);
   }
 }
 
