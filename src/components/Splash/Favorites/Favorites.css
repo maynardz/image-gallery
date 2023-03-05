@@ -1,0 +1,30 @@
+.favorites-container {
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3em;
+  margin-bottom: 50px;
+}
+
+.img-container {
+  height: auto;
+  width: auto;
+  margin: 0.25em;
+}
+
+.fav {
+  height: 250px;
+  width: auto;
+}
+
+.clear-container {
+  /* width: 100%; */
+  position: absolute;
+  top: 0em;
+  left: 1em;
+  text-align: center;
+  color: whitesmoke;
+}
