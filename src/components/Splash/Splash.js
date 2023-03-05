@@ -9,7 +9,7 @@ import {
 import Image from './Image/Image';
 
 const Splash = props => {
-  // console.log(props);
+  console.log(props);
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -18,20 +18,26 @@ const Splash = props => {
     restDelta: 0.001
   });
 
-  return (
-    <div>
-      <>
-        {
-          JSON.stringify(props.images) === '{}' ? <div></div> : (
-            props.images.images.map((image, index) => (
-              <Image key={index} id={image} updateLocalStorage={props.updateLocalStorage} />
-            ))
-          )
-        }
-        <motion.div className="progress" style={{ scaleX }} />
-      </>
-    </div>
-  )
+  if (JSON.stringify(props.images) === '{}') {
+    return (
+      <div></div>
+    )
+  } else {
+    return (
+      <div>
+        <>
+          {
+            JSON.stringify(props.images) === '{}' ? <div></div> : (
+              props.images.images.map((image, index) => (
+                <Image key={index} id={image} updateLocalStorage={props.updateLocalStorage} />
+              ))
+            )
+          }
+          <motion.div className="progress" style={{ scaleX }} />
+        </>
+      </div>
+    )
+  }
 }
 
 export default Splash;

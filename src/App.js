@@ -40,7 +40,7 @@ function App() {
 
   const clearLocalStorage = () => {
     localStorage.clear();
-    // navigate('/');
+    navigate('/');
     window.location.reload();
   };
 
@@ -52,7 +52,7 @@ function App() {
       </Routes>
       <footer>
         <p>ZSM.DEV</p>
-        <HomeRounded onClick={() => window.history.back()} />
+        <HomeRounded onClick={() => navigate('/')} />
         <p onClick={() => navigate('/favorites')}>FAVORITES</p>
       </footer>
     </div>
