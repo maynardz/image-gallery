@@ -27,11 +27,9 @@ const Splash = props => {
       <div>
         <>
           {
-            JSON.stringify(props.images) === '{}' ? <div></div> : (
-              props.images.images.map((image, index) => (
-                <Image key={index} id={image} updateLocalStorage={props.updateLocalStorage} />
-              ))
-            )
+            props.images.images.map((image, index) => (
+              <Image key={index} id={image} updateLocalStorage={props.updateLocalStorage} />
+            ))
           }
           <motion.div className="progress" style={{ scaleX }} />
         </>
