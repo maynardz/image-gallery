@@ -21,7 +21,7 @@ const Splash = props => {
   if (JSON.stringify(props.images) === '{}') {
     return (
       <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <h4 onClick={() => window.location.reload()} style={{ color: 'whitesmoke' }}>Refresh</h4>
+        <h4 onClick={() => window.location.reload()} style={{ color: 'whitesmoke' }}>Load Images</h4>
       </div>
     )
   } else {
